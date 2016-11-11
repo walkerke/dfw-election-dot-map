@@ -3,7 +3,7 @@ library(maptools)
 library(tigris)
 library(rgeos)
 
-# Read in the shape data
+## Read in the shape data
 vtds <- readOGR(dsn = "data-raw", layer = "VTDs", 
                 stringsAsFactors = FALSE)
 

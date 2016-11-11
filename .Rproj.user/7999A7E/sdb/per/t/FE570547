@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(rgdal)\nlibrary(maptools)\nlibrary(tigris)\nlibrary(rgeos)\n\n# Read in the shape data\nvtds <- readOGR(dsn = \"data-raw\", layer = \"VTDs\", \n                stringsAsFactors = FALSE)\n\ntarrant_vtds <- vtds[vtds$CNTY == \"439\", ]\n\ndallas_vtds <- vtds[vtds$CNTY == \"113\", ]\n\ndenton_vtds <- vtds[vtds$CNTY == \"121\", ]\n\ncollin_vtds <- vtds[vtds$CNTY == \"85\", ]\n\nrockwall_vtds <- vtds[vtds$CNTY == \"397\", ]\n\nsource(\"R/functions.R\")\n\ndfw <- bind_rows(\n  select(process_tarrant(), precinct:stein), \n  process_dallas(), \n  process_denton(), \n  process_collin(), \n  select(process_rockwall(), precinct:stein)\n)\n\ndfw1 <- dfw %>%\n  mutate(total = trump + clinton + johnson + stein) %>%\n  mutate(pctjohnson = johnson / total, \n         pctstein = stein / total) %>%\n  arrange(desc(pctjohnson))\n",
+    "created" : 1478876539153.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2765643399",
+    "id" : "FE570547",
+    "lastKnownWriteTime" : 1478877353,
+    "last_content_update" : 1478877353178,
+    "path" : "D:/Users/kylewalker/Box Sync/Center for Urban Studies/election/R/explore.R",
+    "project_path" : "R/explore.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
