@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(tidyverse)\nlibrary(rgdal)\nlibrary(maptools)\nlibrary(tigris)\nlibrary(rgeos)\n\nsource(\"R/functions.R\")\n\n# Read in the shape data\nvtds <- readOGR(dsn = \"data-raw\", layer = \"VTDs\", \n                stringsAsFactors = FALSE)\n\ntarrant <- process_tarrant(\"data-raw/tarrant/tarrant_nov9.xlsx\") %>%\n  mutate(percent_trump = 100 * (trump / total))\n\n",
+    "created" : 1478805648077.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "403624181",
+    "id" : "8CD59392",
+    "lastKnownWriteTime" : 1478811087,
+    "last_content_update" : 1478811087528,
+    "path" : "D:/Users/kylewalker/Box Sync/Center for Urban Studies/election/R/race_charts.R",
+    "project_path" : "R/race_charts.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

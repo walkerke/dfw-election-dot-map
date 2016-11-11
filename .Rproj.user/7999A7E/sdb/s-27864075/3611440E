@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1478876692928.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3611440E",
+    "lastKnownWriteTime" : 19140779460001857,
+    "last_content_update" : 1478876692928,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "6E563F42",
+        "caption" : "dfw",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfw&cache_key=6E563F42",
+        "displayedObservations" : 1842,
+        "environment" : "",
+        "object" : "dfw",
+        "preview" : 0,
+        "totalObservations" : 1842,
+        "variables" : 5
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
